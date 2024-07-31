@@ -7,7 +7,7 @@ const isClient = typeof window!=="undefined";
 console.log(isClient);
 
 export const graphqlClient = new GraphQLClient(
-   "http://localhost:8000/graphql",
+   process.env.NEXT_PUBLIC_API_URL as string ,
 
   {
     headers:()=>( {
